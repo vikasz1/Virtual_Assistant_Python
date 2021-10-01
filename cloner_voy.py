@@ -101,7 +101,6 @@ if __name__ == "__main__":
         query = takeCommand().lower()
 
         if 'youtube' in query:
-            listening = True
             print("What should I search?")
             speak("What should I search?")
             content = takeCommand()
@@ -111,7 +110,6 @@ if __name__ == "__main__":
             speak('Done')
 
         elif "google" in query:
-            listening = True
             speak("opening google")
             url = 'https://www.google.com/'
             webbrowser.open(url)
@@ -119,26 +117,21 @@ if __name__ == "__main__":
             speak('Done')
 
         elif "like" in query:
-            listening = True
             speak("I like to help you in your work")
             print("I like to help you in your work")
 
         elif "calculator" in query:
-            listening = True
             speak("Okay Sir, I am opening calculator")
             os.system("C:\\Windows\\System32\\calc.exe")
 
         elif "notepad" in query:
-            listening = True
             speak("Okay Sir, I am opening notepad")
             os.system("C:\\Windows\\System32\\notepad.exe")
 <<<<<<< Updated upstream
         elif "paint" in query:
-            listening = True
             speak("Okay Sir, I am opening paint")
             os.system("C:\\Windows\\System32\\mspaint.exe")
         elif "WordPad" in query:
-            listening = True
             speak("Okay Sir, I am opening wordpad")
             os.system("C:\\Windows\\System32\\write.exe")
 =======
@@ -159,9 +152,6 @@ if __name__ == "__main__":
 <<<<<<< Updated upstream
                 edict = {'Vikas': 'mauryvikas12345@gmail.com',
                          'Ankit': 'akumar397800@gmail.com'}
-=======
-                edict = {'Shiv': 'mauryashivanand3@gmail.com',
-                         'Ankit': 'akumar397800@gmail.com', }
 >>>>>>> Stashed changes
                 toaddr = edict[to]
                 speak("What should I say?")
@@ -173,28 +163,22 @@ if __name__ == "__main__":
                 speak("Sorry sir , I can not send this")
 
         elif "how are you" in query:
-            listening = True
             speak("I am fine sir")
 
         elif "what is your name" in query:
-            listening = True
             speak("I don't have a name yet")
 
         elif "who are you" in query:
-            listening = True
             speak("I am Virtual Assistant")
 
         elif "why virtual friend" in query:
-            listening = True
             speak("Because i will help you to make your life simple")
 
         elif "sound" in query:
-            listening = True
             winsound.PlaySound("SystemQuestion", winsound.SND_ALIAS)
             speak("Done sir!")
 
         elif "message" in query:
-            listening = True
             speak("What message you want to store?")
             content = takeCommand()
             speak("Alright!")
@@ -202,7 +186,6 @@ if __name__ == "__main__":
             sand.append(content)
 
         elif "inbox" in query:
-            listening = True
             for x in sand:
                 speak(x)
                 print(x)
@@ -217,7 +200,6 @@ if __name__ == "__main__":
                     pass
 
         elif "write" in query:
-            listening = True
             speak("speak")
             print("speak")
             query = takeCommand()
@@ -226,7 +208,6 @@ if __name__ == "__main__":
             f.close()
 
         elif "countdown" in query:
-            listening = True
             speak("Tell me the time in seconds:")
             content = takeCommand()
 
