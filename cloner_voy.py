@@ -14,6 +14,9 @@ import time
 import json
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen
+import lxml
+
+
 import screen_brightness_control as sbc
 
 
@@ -21,10 +24,14 @@ sand = []
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
+<<<<<<< Updated upstream
 engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 200)
+=======
 # print(voices[1].id)
 engine.setProperty('voice', voices[1].id)
+>>>>>>> Stashed changes
+#This is nothing
 
 def speak(audio):
     engine.say(audio)
@@ -108,8 +115,7 @@ if __name__ == "__main__":
             webbrowser.open(url)
             print('Done')
             speak('Done')
-        elif "can do" in query:
-            speak("I can send email, read news headlines, read weather forecasts, open useful application, store messages and control brightness of the computer system")
+
         elif "like" in query:
             speak("I like to help you in your work")
             print("I like to help you in your work")
@@ -121,17 +127,21 @@ if __name__ == "__main__":
         elif "notepad" in query:
             speak("Okay Sir, I am opening notepad")
             os.system("C:\\Windows\\System32\\notepad.exe")
+<<<<<<< Updated upstream
         elif "paint" in query:
             speak("Okay Sir, I am opening paint")
             os.system("C:\\Windows\\System32\\mspaint.exe")
         elif "WordPad" in query:
             speak("Okay Sir, I am opening wordpad")
             os.system("C:\\Windows\\System32\\write.exe")
+=======
+>>>>>>> Stashed changes
+
         elif 'open stackoverflow' in query:
             webbrowser.open("stackoverflow.com")
 
         elif 'time' in query:
-            strTime = datetime.datetime.now().strftime("%H:%M")
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strTime}")
             print(f"Sir, the time is {strTime}")
 
@@ -139,8 +149,10 @@ if __name__ == "__main__":
             try:
                 speak("Whom should i sent email to?")
                 to = takeCommand()
+<<<<<<< Updated upstream
                 edict = {'Vikas': 'mauryvikas12345@gmail.com',
                          'Ankit': 'akumar397800@gmail.com'}
+>>>>>>> Stashed changes
                 toaddr = edict[to]
                 speak("What should I say?")
                 content = takeCommand()
@@ -208,7 +220,7 @@ if __name__ == "__main__":
             speak('What should I search')
             try:
                 query = takeCommand().lower()
-                results = wikipedia.summary(query, sentences=4)
+                results = wikipedia.summary(query, sentences=3)
                 speak("According to Wikipedia")
                 print(results)
                 speak(results)
@@ -266,7 +278,7 @@ if __name__ == "__main__":
                 print(" City Not Found ")
 
         elif 'play music' in query:
-            music_dir = ''
+            music_dir = 'D:\\MUSIC\\My Downloaded Music'
             songs = os.listdir(music_dir)
             # print(songs)
             os.startfile(os.path.join(music_dir, songs[random.random()]))
@@ -335,7 +347,10 @@ if __name__ == "__main__":
             alarm_hour = int(input("Set hour: "))
             alarm_minutes = int(input("Set minutes: "))
             am_pm = input("am or pm? ")
+<<<<<<< Updated upstream
+=======
             winsound.PlaySound("SystemQuestion", winsound.SND_ALIAS)
+>>>>>>> Stashed changes
 
             print(f"Waiting for time: {alarm_hour}:{alarm_minutes} {am_pm}")
             if am_pm == 'pm':  # to convert pm to military time
