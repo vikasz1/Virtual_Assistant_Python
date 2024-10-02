@@ -1,1 +1,1 @@
-pyinstaller --hidden-import=pyttsx3.drivers --onefile cloner_voy.py
+pyinstaller --hidden-import=pyttsx3.drivers --onefile main.py
